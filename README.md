@@ -20,7 +20,7 @@ Este projeto integrador visa analisar a influência das emissões de carbono na 
 - Google API (DataFlow, Data Climáticos)
 - Backend: Python (ou Node.js caso seja um acordo)
 - Dashboard: React / Streamlit / biblioteca escolhida
-- Banco de Dados: MongoDB / PostgreSQL (ou outro)
+- Banco de Dados: MongoDB / MySQL (ou outro)
 - Ferramentas de análise e visualização de dados
 
 ## 🚀 Como Rodar o Projeto
