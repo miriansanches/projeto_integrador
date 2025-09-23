@@ -6,7 +6,7 @@ As emissões de carbono têm um impacto direto no aquecimento global, afetando a
 ## 🚀 Sobre o Projeto
 Este projeto integrador visa analisar a influência das emissões de carbono na sensação térmica utilizando dados de múltiplas fontes. Contamos com:
 
-- 🌐 Uma **API do Google** (DATAFLOW API) para coleta de dados ambientais
+- 🌐 Uma **API do Google** (GEMINI API) para coleta de dados ambientais
 - 🔧 Uma **API própria** para processamento e análise dos dados
 - 📊 Um **dashboard interativo** e um **Banco de Dados** para visualização clara e informativa dos resultados
 
