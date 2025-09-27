@@ -139,7 +139,8 @@ def conexao(query):
             user="projeto2",
             password="senai%40134",
             database="db_sensor",
-            ssl_ca="DigiCertGlobalRootG2.crt.pem"  # Caminho para o certificado
+            ssl_ca="DigiCertGlobalRootG2.crt.pem"
+            ssl_verify_cert = True# Caminho para o certificado
         )
         df = pd.read_sql(query, con)
         con.close()
