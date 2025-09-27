@@ -7,11 +7,12 @@ import pandas as pd
 def conexao(query):
 
     con = mysql.connector.connect(
-        host="127.0.0.1",
+        host="projetointegrador-grupo2.mysql.database.azure.com",
         port="3306",
-        user="root",
-        password="Senai@134",
+        user="projeto2",
+        password="senai%40134",
         db="db_sensor"
+
     )
 
     df = pd.read_sql(query, con)
