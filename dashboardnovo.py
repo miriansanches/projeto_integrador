@@ -131,11 +131,12 @@ st.markdown("""
 def conexao(query):
     try:
         con = mysql.connector.connect(
-            host="127.0.0.1",
-            port="3306",
-            user="root",
-            password="Senai@134",
-            db="db_sensor"
+        host="projetointegrador-grupo2.mysql.database.azure.com",
+        port="3306",
+        user="projeto2",
+        password="senai%40134",
+        db="db_sensor"
+
         )
         df = pd.read_sql(query, con)
         con.close()
