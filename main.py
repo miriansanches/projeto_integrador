@@ -51,7 +51,9 @@ def on_message(client, userdata, msg):
             pressao = mqtt_data.get('pressure')
             altitude = mqtt_data.get('altitude')
             umidade = mqtt_data.get('humidity')
-            co2 = mqtt_data.get('co2')
+            co2 = mqtt_data.get('CO2')
+            poeira1 = mqtt_data.get('particula1')
+            poeira2 = mqtt_data.get('particula2')
             timestamp_unix = mqtt_data.get('timestamp')
             id_cidade = 1
 
@@ -72,8 +74,8 @@ def on_message(client, userdata, msg):
                 pressao=pressao,
                 altitude=altitude,
                 umidade=umidade,
-                poeira1=0.0,
-                poeira2=0.0,
+                poeira1=poeira1,
+                poeira2=poeira2,
                 co2=co2,
                 data_hora=timestamp,
                 id_cidade=id_cidade
@@ -113,7 +115,7 @@ def post_data():
         pressao = data.get('pressao')
         altitude = data.get('altitude')
         umidade = data.get('umidade')
-        co2 = data.get('co2')
+        co2 = data.get('CO2')
         timestamp_unix = data.get('data_hora')
         id_cidade = data.get('id_cidade')
 
@@ -131,6 +133,8 @@ def post_data():
             altitude=altitude,
             umidade=umidade,
             co2=co2,
+            poeira1 = mqtt_data.get('particula1'),
+            poeira2 = mqtt_data.get('particula2'),
             data_hora=timestamp,
             id_cidade=id_cidade
         )
@@ -528,6 +532,7 @@ if __name__ == '__main__':
     
     start_mqtt()
     app.run(port=5000, host='localhost', debug=True)
+
 
 
 
